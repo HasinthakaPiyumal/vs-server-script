@@ -7,7 +7,7 @@ def _build_cli() -> argparse.ArgumentParser:
     p.add_argument('action', choices=['setup', 'start', 'teardown'], help='Action to perform')
     p.add_argument('--auth-token', '-a', help='ngrok auth token', default=None)
     p.add_argument('--silent', '-s', action='store_true', help='Run ngrok silently')
-    p.add_argument('--log', '-l', default='vsserver.log', help='VSCode server log file')
+    p.add_argument('--log', '-l', default='vscolab.log', help='VSCode server log file')
     return p
 
 

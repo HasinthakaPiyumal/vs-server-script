@@ -6,7 +6,7 @@ Features
 - Install scripts (from `src/`) for `code-server` and `ngrok` (invoked by `setup`).
 - Start `code-server` and `ngrok` together with logs written to files.
 - Teardown/uninstall helpers.
-- Packaging with a console entry point `vsserver`.
+- Packaging with a console entry point `vscolab`.
 
 Install locally
 
@@ -22,19 +22,19 @@ Usage
 
 ```bash
 # setup (runs install scripts under src/)
-vsserver setup
+vscolab setup
 
 # start (will choose a random free port and start code-server + ngrok)
-vsserver start --auth-token YOUR_NGROK_TOKEN
+vscolab start --auth-token YOUR_NGROK_TOKEN
 
 # teardown
-vsserver teardown
+vscolab teardown
 ```
 
 Notes
 - This project assumes `code-server` and `ngrok` are available or that the
   install scripts in `src/` will install them.
-- Background processes write logs to `vsserver.log` and `ngrok.log` by default.
+- Background processes write logs to `vscolab.log` and `ngrok.log` by default.
 
 License
 

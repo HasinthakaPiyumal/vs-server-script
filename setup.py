@@ -23,7 +23,7 @@ setup(
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'vsserver=vs_colab.cli:main'
+            'vscolab=vs_colab.cli:main'
         ]
     },
     classifiers=[

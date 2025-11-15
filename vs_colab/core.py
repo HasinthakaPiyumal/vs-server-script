@@ -64,7 +64,7 @@ class VSExpose:
                 print("script stderr:", result.stderr)
         print("Setup complete.")
 
-    def start(self, auth_token: Optional[str] = None, silent: bool = False, log_file: str = 'vsserver.log'):
+    def start(self, auth_token: Optional[str] = None, silent: bool = False, log_file: str = 'vscolab.log'):
         port = self._get_random_port()
         print(f"Chosen port: {port}")
         self._start_vscode(port=port, log_file=log_file)
@@ -103,7 +103,7 @@ class VSExpose:
         s.close()
         return port
 
-    def _start_vscode(self, port: int = 8080, log_file: str = 'vsserver.log'):
+    def _start_vscode(self, port: int = 8080, log_file: str = 'vscolab.log'):
         print("Starting VSCode server...")
         cmd = f"nohup code-server --port {port} > {log_file} 2>&1 &"
         proc = run_background_command(cmd, stdout_log=log_file, stderr_log=log_file)
